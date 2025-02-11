@@ -1,0 +1,1 @@
+const t=JSON.parse('{"key":"v-39a2059c","path":"/FAQ.html","title":"Frequently Asked Question(s)","lang":"en-GB","frontmatter":{},"excerpt":"","headers":[{"level":2,"title":"What is Chariot?","slug":"what-is-chariot","link":"#what-is-chariot","children":[]}],"git":{"updatedTime":null,"contributors":[]},"filePathRelative":"FAQ.md"}');export{t as data};
