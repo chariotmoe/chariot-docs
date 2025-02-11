@@ -26,5 +26,6 @@
 		"lint-staged": "^13.0.3",
 		"prettier": "^2.7.1",
 		"tslib": "^2.4.1"
-	}
+	},
+	"packageManager": "pnpm@7.12.1"
 }
