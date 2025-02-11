@@ -6,7 +6,7 @@
 	"private": true,
 	"scripts": {
 		"build": "vuepress build docs",
-		"lint": "eslint --ext \".ts\"",
+		"lint": "eslint",
 		"format": "prettier **/*.{ts,js,md,json,yml,yaml} --write",
 		"prepare": "husky install"
 	},
