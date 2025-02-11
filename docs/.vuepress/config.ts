@@ -32,7 +32,7 @@ export default defineUserConfig({
         navbar,
         home: "/",
         sidebar,
-        // contributors: false,
+        contributors: false,
         // lastUpdated: false,
         toggleColorMode: "Switch Theme",
         sidebarDepth: 3,
