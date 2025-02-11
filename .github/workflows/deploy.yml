@@ -3,15 +3,14 @@ name: Deploy VuePress to GitHub Pages
 on:
   push:
     branches:
-      - main  # Change this to your deployment branch if needed
+      - master
 
 jobs:
   deploy:
     runs-on: ubuntu-latest
+
     permissions:
-      id-token: write
-      contents: read
-      pages: write  # Required for GitHub Pages deployment
+      contents: write 
 
     steps:
       - name: Checkout repository
@@ -31,12 +30,11 @@ jobs:
         run: pnpm install
 
       - name: Build VuePress site
-        run: pnpm run build  # Make sure this command generates the output in docs/.vuepress/dist
+        run: pnpm run build
 
-      - name: Upload artifact
-        uses: actions/upload-pages-artifact@v2
+      - name: Deploy to gh-pages branch
+        uses: peaceiris/actions-gh-pages@v4
         with:
-          path: docs/.vuepress/dist  # Ensure this matches the actual build output folder
-
-      - name: Deploy to GitHub Pages
-        uses: actions/deploy-pages@v1
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: docs/.vuepress/dist
+          publish_branch: gh-pages
