@@ -1,55 +1,42 @@
-name: Deploy
+name: Deploy VuePress to GitHub Pages
 
 on:
-    # trigger deployment on every push to master branch
-    push:
-        branches: [master]
-    # trigger deployment manually
-    workflow_dispatch:
+  push:
+    branches:
+      - main  # Change this to your deployment branch if needed
 
 jobs:
-    docs:
-        runs-on: ubuntu-latest
-        permissions:
-            id-token: write
-            contents: read
-            pages: write # Needed if deploying to GitHub Pages
+  deploy:
+    runs-on: ubuntu-latest
+    permissions:
+      id-token: write
+      contents: read
+      pages: write  # Required for GitHub Pages deployment
 
-        steps:
-            - uses: actions/checkout@v3
-              with:
-                  # fetch all commits to get last updated time or other git log info
-                  fetch-depth: 0
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
 
-            - name: Setup PNPM
-              uses: pnpm/action-setup@v2
-              with:
-                  # choose pnpm version to use
-                  version: 7
-                  # install deps with pnpm
-                  run_install: true
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 18
 
-            - name: Setup NodeJS
-              uses: actions/setup-node@v3
-              with:
-                  # choose node.js version to use
-                  node-version: 18
-                  # cache deps for pnpm
-                  cache: pnpm
+      - name: Setup PNPM
+        uses: pnpm/action-setup@v2
+        with:
+          version: latest
 
-            # run build script
-            #- name: Build Doc
-            #  run: pnpm build
+      - name: Install dependencies
+        run: pnpm install
 
-            # please check out the docs of the workflow for more details
-            # @see https://github.com/crazy-max/ghaction-github-pages
-            - name: Deploy Doc
-              uses: actions/deploy-pages@v1
-              with:
-                  # deploy to gh-pages branch
-                  target_branch: gh-pages
-                  # deploy the default output dir of VuePress
-                  build_dir: docs/.vuepress/dist
-              env:
-                  # @see https://docs.github.com/en/actions/reference/authentication-in-a-workflow#about-the-github_token-secret
-                  GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      - name: Build VuePress site
+        run: pnpm run build  # Make sure this command generates the output in docs/.vuepress/dist
+
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v2
+        with:
+          path: docs/.vuepress/dist  # Ensure this matches the actual build output folder
+
+      - name: Deploy to GitHub Pages
+        uses: actions/deploy-pages@v1
