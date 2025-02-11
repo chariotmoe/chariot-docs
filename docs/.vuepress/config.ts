@@ -5,7 +5,7 @@ import { sidebar } from "./configs/sidebar";
 
 export default defineUserConfig({
     lang: "en-GB",
-    base: "/",
+    base: "https://chariotmoe.github.io/chariot-docs/",
     title: "Chariot",
     head: [
         ["meta", { property: "og:title", content: "Chariot" }],
