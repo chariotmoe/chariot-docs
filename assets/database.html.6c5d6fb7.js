@@ -1,0 +1,1 @@
+const a=JSON.parse('{"key":"v-e4667b8a","path":"/architecture/database.html","title":"Database Schema and Logic","lang":"en-GB","frontmatter":{},"excerpt":"","headers":[],"git":{"updatedTime":1747836110000},"filePathRelative":"architecture/database.md"}');export{a as data};

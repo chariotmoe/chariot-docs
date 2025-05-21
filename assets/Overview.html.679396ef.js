@@ -1,0 +1,1 @@
+const e=JSON.parse('{"key":"v-2c9be4dd","path":"/architecture/Overview.html","title":"Chariot System Architecture","lang":"en-GB","frontmatter":{},"excerpt":"","headers":[],"git":{"updatedTime":1747836110000},"filePathRelative":"architecture/Overview.md"}');export{e as data};
