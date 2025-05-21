@@ -1,0 +1,1 @@
+const e=JSON.parse('{"key":"v-4f3e0e82","path":"/architecture/Build%20and%20Development.html","title":"Build and Development","lang":"en-GB","frontmatter":{},"excerpt":"","headers":[],"git":{"updatedTime":1747835159000},"filePathRelative":"architecture/Build and Development.md"}');export{e as data};
