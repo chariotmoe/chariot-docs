@@ -1,1 +1,0 @@
-const e=JSON.parse('{"key":"v-13bc8bcc","path":"/architecture/Fontend%20Architecture.html","title":"Frontend Architecture","lang":"en-GB","frontmatter":{},"excerpt":"","headers":[],"git":{"updatedTime":1747835159000},"filePathRelative":"architecture/Fontend Architecture.md"}');export{e as data};
