@@ -17,14 +17,14 @@ export const sidebar: SidebarConfig = [
         text: "Chariot's Architecture",
         collapsible: true,
         children: [
-            "/architecture/Overview.md",
-            "/architecture/Frontend Architecture.md",
-            "/architecture/Backend Architecture.md",
-            "/architecture/API Communication.md",
-            "/architecture/Database Schema and Logging.md",
-            "/architecture/Security Considerations.md",
-            "/architecture/Build and Deployment.md",
-            "/architecture/Monitoring and Logging.md",
+            "/architecture/overview.md",
+            "/architecture/frontend.md",
+            "/architecture/backend.md",
+            "/architecture/api.md",
+            "/architecture/database.md",
+            "/architecture/security.md",
+            "/architecture/build-deploy.md",
+            "/architecture/monitoring.md",
         ]
     },
 ];
