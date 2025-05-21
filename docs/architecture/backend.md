@@ -1,6 +1,6 @@
 # Backend Architecture
 
-The backend is written in **Rust**, using the Axum web framework. Axum is a highly performant, type-safe, and modular framework built on top of Tokio. It is well-suited for building scalable APIs and services with strong compile-time guarantees.
+The backend is written in **Rust**, using the Axum web framework. Axum is a highly performant, type-safe, and modular framework built on top of Tokio and Hyper. It is well-suited for building scalable APIs and services with strong compile-time guarantees.
 
 The backend is organised into clearly defined modules, each responsible for specific features such as user authentication, user management, and more. Routes are registered with Axum’s router and are grouped logically. Middleware is used to manage tasks such as logging, authentication checks, and rate limiting.
 
