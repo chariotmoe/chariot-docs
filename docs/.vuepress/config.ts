@@ -11,7 +11,7 @@ export default defineUserConfig({
         ["link", { rel: "icon", href: "https://chariotmoe.github.io/chariot-docs/favicon.ico" }],
         ["meta", { property: "og:title", content: "Chariot" }],
         ["meta", { property: "og:image", content: "https://chariotmoe.github.io/chariot-docs/chariot.png" }],
-        ["meta", { property: "og:description", content: "The house documentation for Chariot, a modern app that seamlessly combines note-taking and eBook reading into one intuitive platform." }],
+        ["meta", { property: "og:description", content: "The house documentation for Chariot." }],
         ["meta", { property: "theme-color", content: "#7E6AAD" }],
     ],
     description: "House documentation for Chariot",
