@@ -1,1 +1,0 @@
-const e=JSON.parse('{"key":"v-99b5a0d4","path":"/architecture/security.html","title":"Security Considerations","lang":"en-GB","frontmatter":{},"excerpt":"","headers":[],"git":{"updatedTime":1747835408000},"filePathRelative":"architecture/security.md"}');export{e as data};
