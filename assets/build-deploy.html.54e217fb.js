@@ -1,1 +1,0 @@
-const e=JSON.parse('{"key":"v-7706fa20","path":"/architecture/build-deploy.html","title":"Build and Development","lang":"en-GB","frontmatter":{},"excerpt":"","headers":[],"git":{"updatedTime":1747835636000},"filePathRelative":"architecture/build-deploy.md"}');export{e as data};

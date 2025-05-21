@@ -1,1 +1,0 @@
-const e=JSON.parse('{"key":"v-6f028c04","path":"/architecture/frontend.html","title":"Frontend Architecture","lang":"en-GB","frontmatter":{},"excerpt":"","headers":[],"git":{"updatedTime":1747835636000},"filePathRelative":"architecture/frontend.md"}');export{e as data};
